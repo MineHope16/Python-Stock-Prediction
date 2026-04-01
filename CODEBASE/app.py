@@ -13,7 +13,11 @@ model = load_model(model_path)
 
 st.header('Stock Market Predictor')
 
-stock =st.text_input('Enter Stock Symbol', 'GOOG')
+# Popular stocks list
+popular_stocks = ['AAPL', 'MSFT', 'GOOG', 'AMZN', 'TSLA', 'NVDA', 'META', 
+                  'JPM', 'JNJ', 'V', 'PG', 'MA', 'COST', 'XOM', 'WMT']
+
+stock = st.selectbox('Select Stock Symbol', popular_stocks)
 start = '2013-01-01'
 end = '2024-03-01'
 
